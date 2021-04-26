@@ -70,33 +70,36 @@ const Modal = ({ id, setModalActive }) => {
           className={style.close}
           alt="close"
         />
-        <div className={style.left}>
-          <img src={image.src} alt="modal item" />
-          <input
-            type="text"
-            placeholder="Ваше имя"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Ваш комментарий"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
-          />
-          <button
-            onClick={() => {
-              if (!validateDate()) {
-                NotificationManager.warning('Заполните поля ввода');
-              } else {
-                onSubmit();
-              }
-            }}
-            onKeyDown={(e) => e.key === 'Enter' && onSubmit}
-          >
-            Оставить комментарий
-          </button>
-        </div>
+          <div className={style.img}>
+            <img src={image.src} alt="modal item" />
+          </div>
+          <div className={style.left}>
+            <input
+              type="text"
+              placeholder="Ваше имя"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Ваш комментарий"
+              value={desc}
+              onChange={(e) => setDesc(e.target.value)}
+            />
+            <button
+              onClick={() => {
+                if (!validateDate()) {
+                  NotificationManager.warning('Заполните поля ввода');
+                } else {
+                  onSubmit();
+                }
+              }}
+              onKeyDown={(e) => e.key === 'Enter' && onSubmit}
+            >
+              Оставить комментарий
+            </button>
+          </div>
+
         <div className={style.right}>
           {comments.length &&
             comments.map((comment) => {

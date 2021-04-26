@@ -11,6 +11,7 @@
 }
 
 .row {
+  flex-wrap: wrap;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -39,9 +40,17 @@
   flex-basis: 37%;
 }
 
-.left > img {
+.img {
+  flex-basis: 60%;
+}
+
+.img > img {
   width: 100%;
   padding-bottom: 29px;
+}
+
+.left {
+  order: 1;
 }
 
 .left > input,
@@ -88,9 +97,14 @@
 @media screen and (max-width: 767px) {
   .row {
     height: 100%;
-    flex-direction: column;
     justify-content: flex-start;
     padding: 0;
+  }
+  .img {
+    flex-basis: 100%;
+  }
+  .left {
+    flex-basis: 100%;
   }
   .left > input,
   .left > button {
@@ -98,9 +112,12 @@
     max-width: 90%;
   }
   .right {
+    padding: 20px 20px 0 20px;
+    flex-basis: 100%;
     padding: 20px;
   }
-  .left > img {
-    padding-bottom: 10px;
+  .img > img {
+    padding-bottom: 0;
+    height: 100%;
   }
 }
