@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: white;
+}
+
+.close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.left,
+.right {
+  flex-direction: column;
+}
+
+.left {
+  flex-basis: 60%;
+}
+
+.right {
+  flex-basis: 37%;
+}
+
+.left > img {
+  width: 100%;
+  padding-bottom: 29px;
+}
+
+.left > input,
+.left > button {
+  display: block;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+  padding: 8px 11px;
+}
+
+.left > input {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.left > input::placeholder {
+  color: #cccccc;
+}
+
+.left > button {
+  background: #4997d0;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 13px;
+  color: #999999;
+  padding-bottom: 5px;
+}
+
+.desc {
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .left > input,
+  .left > button {
+    margin: 20px;
+    max-width: 90%;
+  }
+  .right {
+    padding: 20px;
+  }
+  .left > img {
+    padding-bottom: 10px;
+  }
+}

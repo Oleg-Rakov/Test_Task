@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+  border-top: 1px solid #cccccc;
+  margin-top: 377px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.container > span {
+  display: block;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+   margin-top: 150px;
+  }
+}
+
